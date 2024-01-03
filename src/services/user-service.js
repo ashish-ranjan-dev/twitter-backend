@@ -31,9 +31,11 @@ class UserService {
                     message: "Wrong credentials"
                 };
             }
-            // return user;
             console.log("user successfully signed in");
+            const token = user.generateJwt();
+            return token;
         } catch (error) {
+            console.log(error);
             throw error;
         }
     };
