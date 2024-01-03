@@ -1,7 +1,8 @@
 import mongoose from "mongoose";
+import { MongoDBURI } from "./server-config.js";
 
 const connect = async ()=>{
-    await mongoose.connect('mongodb+srv://ashish135ranjan:ar123@cluster0.cnanoxc.mongodb.net/?retryWrites=true&w=majority');
+    await mongoose.connect(MongoDBURI);
 
     console.log("mongo db connected");
 }
