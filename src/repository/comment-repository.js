@@ -8,5 +8,5 @@ class CommentRepository extends CrudRepository {
     };
 };
 
-module.exports = CommentRepository;
+export default CommentRepository;
 
